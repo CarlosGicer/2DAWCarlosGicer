@@ -21,6 +21,7 @@
         echo "</tr>";
     }
     echo "</table>";
+    echo "fin";
 
 
 ?>
