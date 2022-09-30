@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +9,19 @@
 <body>
     <?php
 
+        $array = array(2,3,4,5,6);
 
-        $n = rand(1,30);
-        $n2 = rand(1,30);
+        foreach($array as $valor){
 
-        $resta = $n - $n2;
-        $division = $n / $n2;
+            for($i = 1; $i < 11; $i++){
 
-        echo "Los numeros generados son: " . $n . " y " . $n2 . "</br>";
-        echo "Resta: " . $resta . ", Division: " . $division;
+                echo $valor . " * " . $i . " = " . $valor*$i . "</br>";
+
+            }
+
+            echo "</br>";
+
+        }
 
     ?>
 </body>

@@ -9,14 +9,18 @@
 <body>
     <?php
 
-        $radio = rand(100,500)/100;
+        $array = array(1,2,3,4,5,6,7,8,9,10);
+        $cont = 0;
 
-        echo "El radio es " . $radio;
+        for($i = 1; $i < 11; $i++){
+            if($i % 2 == 0){
+                $cont+=$array[$i-1];
+            }else{
+                echo $array[$i-1] . " ";
+            }
+        }
 
-        $cubo = pow($radio, 3);
-        $volumen = (4/3) * pi() * $cubo;
-        echo "</br>" . "El volumen es de " . $volumen;
-
+    echo "</br>" . $cont;
     ?>
 </body>
 </html>
