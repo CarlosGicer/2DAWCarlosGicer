@@ -8,11 +8,13 @@
 </head>
 <body>
     <?php
-        $direcionIp = "192.168.11.200";
+        $direccionIp = "192.168.11.200";
 
-        $numeros = explode(".", $direcionIp );
-        for($i=0;$i<=strlen($direccionIp);$i++){
-            echo $numeros." ";
+        $numeros = explode(".", $direccionIp );
+
+        echo"Direccion IP= ".$direccionIp."<br><br>";
+        for($i=0;$i<sizeof($numeros);$i++){
+            echo "Numero".($i+1)."=".$numeros[$i]."<br>";
 
         }
 
