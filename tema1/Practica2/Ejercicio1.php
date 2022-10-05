@@ -14,13 +14,13 @@
         for($i=0;$i<sizeof($nombres);$i++){
             switch($opcion){
                 case "L":
-                    echo strtolower($nombres[$i]);
+                    echo strtolower($nombres[$i]."&nbsp;");
                     break;
                 case "U":
-                    echo strtoupper($nombres[$i]);
+                    echo strtoupper($nombres[$i]."&nbsp;");
                     break;
                 case "M":
-                    echo strtolower( ucfirst($nombres[$i]) );
+                    echo strtolower( ucfirst($nombres[$i]."&nbsp;") );
                     break;
             }
         }
@@ -30,7 +30,15 @@
 
     $nombres = array("Cosentino", "Garciden", "Deretil", "Makito", "Globomatik");
 
-
+    $opcion1 = "L";
+    $opcion2 = "U";
+    $opcion3 = "M";
+    echo"Con la L<br>";
+    convertirClientes($nombres, $opcion1);
+    echo"<br>Con la U<br>";
+    convertirClientes($nombres, $opcion2);
+    echo"<br>Con la M<br>";
+    convertirClientes($nombres, $opcion3);
 
     ?>
 </body>
