@@ -31,8 +31,11 @@
 
         $array = array();
 
-        add($array,2,4);
-        borrar($array,3);
+        add($array,1,5);
+        echo("El array con 5 unos<br>");
+        pintar($array);
+        borrar($array,2);
+        echo("<br>Borramos 2 numeros<br>");
         pintar($array);
         include_once($_SERVER["DOCUMENT_ROOT"] . "/pie.php");
     ?>
