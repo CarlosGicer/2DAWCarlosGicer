@@ -27,5 +27,5 @@ include("lib.php");
 
 ?>
 <!--<form action="controlador.php">
-    <button type="submit" name="repetir">Jugar Otra Vez</button>
+    <input type="submit" name="repetir">Jugar Otra Vez</button>
 </form>-->
