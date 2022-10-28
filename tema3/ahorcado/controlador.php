@@ -5,21 +5,27 @@ include("lib.php");
 
 <?php
 
-  $contiene=false;
-  $letra=$_GET["letra"];
+  
+  if(isset($_GET["letra"])){
 
-  for($i=0; $i < strlen($_SESSION['palabra']); $i++) {
-    if ($_SESSION['palabra'][$i] == $letra) {
-        $_SESSION['palabraActual'][$i] = $letra;
-        $contiene=true;
+    $contiene=false;
+    $letra=$_GET["letra"];
+
+    for($i=0; $i < strlen($_SESSION['palabra']); $i++) {
+      if ($_SESSION['palabra'][$i] == $letra) {
+          $_SESSION['palabraActual'][$i] = $letra;
+          $contiene=true;
+      }
     }
+  
+    if($contiene==false){
+      $_SESSION['contError']++;
+    }
+    
   }
+  
 
-  if($contiene==false){
-    $_SESSION['contError']++;
-  }
-
-  /*if(isset($_POST["repetir"])){
+  /*if(isset($_POST['repetir'])){
     session_destroy();
   }*/
   echo '<script>window.location="'."index.php".'"</script>'; 
