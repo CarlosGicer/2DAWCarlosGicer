@@ -2,7 +2,6 @@
 include("lib.php");
 //session_destroy();
 ?>
-
 <?php
 
   
@@ -16,17 +15,21 @@ include("lib.php");
           $_SESSION['palabraActual'][$i] = $letra;
           $contiene=true;
       }
-    }
+    } 
   
-    if($contiene==false){
+    if($contiene==false && $_SESSION['contError']<6){
       $_SESSION['contError']++;
     }
-    
+
+    echo '<script>window.location="'."index.php".'"</script>'; 
   }
   
 
-  /*if(isset($_POST['repetir'])){
-    session_destroy();
-  }*/
-  echo '<script>window.location="'."index.php".'"</script>'; 
+  if (isset($_GET['accion'])) {
+      if ($_GET['accion']=='nuevaPartida') {
+          session_destroy();
+          echo '<script>window.location="'."index.php".'"</script>'; 
+      }
+  }
+
 ?>

@@ -3,6 +3,7 @@ include("lib.php");
 //session_destroy();
 ?>
 
+<body>
 <?php
    if(!isset($_SESSION['palabra'])){
         
@@ -25,7 +26,10 @@ include("lib.php");
     
     $_SESSION ['letrasUsadas'] =[];
 
+    pintarFallos();
+    echo "<h3 class='text-center '><a href='controlador.php?accion=nuevaPartida' class='btn btn-outline-danger' class='text-center'>Volver a Jugar</a></h3>";
 ?>
-<!--<form action="controlador.php">
-    <input type="submit" name="repetir">Jugar Otra Vez</button>
-</form>-->
+
+</body>
+</html>
+
