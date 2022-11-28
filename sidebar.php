@@ -12,21 +12,16 @@
 					</button>
 					<div class="collapse show" id="tema1">
 					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-						<li><a href="/tema1/Ejercicio1.php" class="link-dark rounded">Ejercicio 1</a></li>
-						<li><a href="/tema1/Ejercicio2.php" class="link-dark rounded">Ejercicio 2</a></li>
-						<li><a href="/tema1/Ejercicio3.php" class="link-dark rounded">Ejercicio 3</a></li>
-						<li><a href="/tema1/Ejercicio4.php" class="link-dark rounded">Ejercicio 4</a></li>
-						<li><a href="/tema1/Ejercicio5.php" class="link-dark rounded">Ejercicio 5</a></li>
-						<li><a href="/tema1/Ejercicio6.php" class="link-dark rounded">Ejercicio 6</a></li>
-						<li><a href="/tema1/Ejercicio7.php" class="link-dark rounded">Ejercicio 7</a></li>
-						<li><a href="/tema1/Ejercicio8.php" class="link-dark rounded">Ejercicio 8</a></li>
-						<li><a href="/tema1/Ejercicio9.php" class="link-dark rounded">Ejercicio 9</a></li>
-						<li><a href="/tema1/Ejercicio10.php" class="link-dark rounded">Ejercicio 10</a></li>
-						<li><a href="/tema1/Ejercicio11.php" class="link-dark rounded">Ejercicio 11</a></li>
-						<li><a href="/tema1/Ejercicio12.php" class="link-dark rounded">Ejercicio 12</a></li>
-						<li><a href="/tema1/Ejercicio13.php" class="link-dark rounded">Ejercicio 13</a></li>
-						<li><a href="/tema1/Ejercicio14.php" class="link-dark rounded">Ejercicio 14</a></li>
-						
+						<li><a href="/tema1/eje1.php" class="link-dark rounded">Ejercicio 1</a></li>
+						<li><a href="/tema1/ejemploArrayAsociativo.php" class="link-dark rounded">Ejemplo array asociativo</a></li>
+						<li><a href="/tema1/ejemploclase1.php" class="link-dark rounded">Ejemplo clase 1</a></li>
+						<li><a href="/tema1/ejercicio9.php" class="link-dark rounded">Ejercicio 9</a></li>
+						<li><a href="/tema1/ejercicio11.php" class="link-dark rounded">Ejercicio 11</a></li>
+						<li><a href="/tema1/ejercicio13.php" class="link-dark rounded">Ejercicio 13</a></li>
+						<li><a href="/tema1/ejercicio14.php" class="link-dark rounded">Ejercicio 14</a></li>
+						<li><a href="/tema1/ejercicio6_2.php" class="link-dark rounded">Ejercicio 6 - P2</a></li>
+						<li><a href="/tema1/tienda.php" class="link-dark rounded">Tienda (sus propios estilos)</a></li>
+					</ul>
 					</div>
 				</li>
 				<li class="mb-1">
