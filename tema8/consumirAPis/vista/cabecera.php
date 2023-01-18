@@ -8,9 +8,9 @@
     <title>Pokedex</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <style>
-    .fotoCard{
-        background-image: url("../imagenes/backCard.jpg");
-        background-color: red;
+    .planta{
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(125,191,146,1) 62%, rgba(0,130,42,1) 100%); 
     }
 </style>
 </head>

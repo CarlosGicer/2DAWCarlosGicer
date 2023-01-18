@@ -41,10 +41,50 @@ class VistaPokemons
 
                 if ($resultado2 != false) {
                     $pokemonData = json_decode($resultado2);
+
+                    $pokemonTipo = $pokemonData->types[0]->type->name;
+//---------------------COLOR FONDO CARD--------------------------------------------------------------------------
+
+                    switch ($pokemonTipo) {
+                        case 'grass':
+                            $color =" background: rgb(255,255,255);
+                            background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(125,191,146,1) 62%, rgba(0,130,42,1) 100%); ";
+                            break;
+                        case 'fire':
+                            $color ="  background: rgb(255,255,255);
+                            background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(191,125,125,1) 62%, rgba(199,0,0,1) 100%); ";
+                            break;
+                        
+                        case 'water':
+                            $color ="  background: rgb(255,255,255);
+                            background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(125,191,184,1) 62%, rgba(0,196,199,1) 100%); ";
+                            break;
+                                
+                        case 'bug':
+                            $color ="  background: rgb(255,255,255);
+                            background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(116,199,0,1) 62%, rgba(116,199,0,1) 100%); ";
+                            break;
+                            
+                        case 'flying':
+                            $color ="  background: rgb(255,255,255);
+                            background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(152,142,195,1) 62%, rgba(147,133,203,1) 100%); ";
+                            break;
+
+
+                        case 'normal':
+                            $color ="  background: rgb(255,255,255);
+                            background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(199,198,200,1) 62%, rgba(175,175,175,1) 100%);  ";
+                            break;
+                            
+                        default:
+                        $color =" background: rgb(255,255,255);
+                        background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(125,191,146,1) 62%, rgba(0,130,42,1) 100%); ";
+                            break;
+                    }
+//----------------------FIN-------------------------------------------------------------------------------------
                     "";
                     echo "
-                    <div class='card border-dark me-5 mt-2 mb-3 ' style='width: 18rem; box-shadow: 0px 10px 10px black;  background: rgb(255,255,255);
-                    background: radial-gradient(circle, rgba(255,255,255,1) 32%, rgba(129,235,249,1) 47%, rgba(161,204,236,1) 68%, rgba(160,244,204,1) 100%);'> 
+                    <div class='card border-dark me-5 mt-2 mb-3 ' style='width: 18rem; box-shadow: 0px 10px 10px black;".$color."'> 
                     <a href='enrutador.php?accion=mostrarDetallePokemon&id=" . $pokemonData->id . "' class='btn'><img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" . $pokemonData->id . ".png' class='card-img-top' alt='...'> </a> 
                         <div class='card-body '>
                         <p class='card-text'> #" . $pokemonData->id . "</p>
