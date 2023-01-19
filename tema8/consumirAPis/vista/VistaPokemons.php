@@ -6,14 +6,7 @@ class VistaPokemons
 
     public static function mostrarPokemonsAPI($pagina)
     {
-
-
         include "cabecera.php";
-
-
-        echo "";
-
-
 
         $uri = "https://pokeapi.co/api/v2/pokemon?offset=$pagina&limit=20";
         $reqPrefs['http']['method'] = 'GET';
@@ -25,8 +18,6 @@ class VistaPokemons
         if ($resultado != false) {
             $respPHP = json_decode($resultado);
 
-            //Pagina siguiente
-            $nextPage = $respPHP->next;
 
             echo "  <div>
                         

@@ -9,10 +9,17 @@ const api = express.Router();
 //Crear tareas
 api.post("/task", TaskController.createTask);
 
-
 //Consultar todas las tareas
-api.post("/task", TaskController.getTask);
+api.post("/task", TaskController.getTasks);
 
-module.exports = {
-    createTask
-};
+//Consultar una tarea 
+api.get("/task/:id", TaskController.getTask);
+
+//Borrar tarea por ID
+api.delete("/task/:id", TaskController.deleteTask);
+
+//Modificar tarea por ID
+api.put("/task/:id",TaskController.updateTask);
+
+module.exports = api;
+  
