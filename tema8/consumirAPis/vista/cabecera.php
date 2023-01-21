@@ -8,10 +8,6 @@
     <title>Pokedex</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <style>
-    .planta{
-        background: rgb(255,255,255);
-        background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(125,191,146,1) 62%, rgba(0,130,42,1) 100%); 
-    }
 </style>
 </head>
 
@@ -22,7 +18,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(206,246,245,1) 
     <div class="container-fluid">
     <a class="navbar-brand" href=""><img src="./imagenes/pokemon_icon.png" alt="Sin Barreras" width="160" height="90"></a>
 
-    <a class="mx-auto" href="https://fontmeme.com/es/redimensionar-imagenes/"><img src="https://fontmeme.com/permalink/230113/fc034d8ff9e7021249cd9345a229a28d.png" alt="redimensionar-imagenes" border="0"></a>
+    <a class="mx-auto" href=""><img src="https://fontmeme.com/permalink/230113/fc034d8ff9e7021249cd9345a229a28d.png" alt="redimensionar-imagenes" border="0"></a>
         
 
 
