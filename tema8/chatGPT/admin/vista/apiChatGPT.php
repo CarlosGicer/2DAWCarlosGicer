@@ -16,7 +16,7 @@ class apiChatGPT
     $response = $client->request('POST', 'https://api.openai.com/v1/completions', [
       'body' => '{"model": "text-davinci-003", "prompt": "' . $textoArticulo . '", "temperature": 0, "max_tokens": 1000, "n": 1}',
       'headers' => [
-        'Authorization' => 'Bearer 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',
+        'Authorization' => 'Bearer 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',
         'accept' => 'application/json',
         'content-type' => 'application/json',
       ],
@@ -33,7 +33,7 @@ class apiChatGPT
     $response = $client->request('POST', 'https://api.openai.com/v1/images/generations', [
       'body' => '{"prompt": "' . $textoImagen . '", "size": "1024x1024", "n": 1}',
       'headers' => [
-        'Authorization' => 'Bearer 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',
+        'Authorization' => 'Bearer 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',
         'accept' => 'application/json',
         'content-type' => 'application/json',
       ],
@@ -43,6 +43,7 @@ class apiChatGPT
 
     $respuestaJSON = json_decode($respuesta);
 
-    echo $respuestaJSON->data[0]->url;
+   echo $respuestaJSON->data[0]->url;
+   $imagenGPT = urldecode($respuestaJSON->data[0]->url) ;
   }
 }
