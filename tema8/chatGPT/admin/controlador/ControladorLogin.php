@@ -18,7 +18,7 @@
             //Login correcto
             if ($valido == 1) {
                 $_SESSION['usuario'] = serialize($usuario);
-                echo "<script>window.location='enrutador.php?accion=mostrarN';</script>";
+                echo "<script>window.location='enrutador.php?accion=mostrarFormulario';</script>";
             }
 
 

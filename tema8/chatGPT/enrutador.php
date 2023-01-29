@@ -52,7 +52,7 @@ if ($_REQUEST) {
     if (isset($_REQUEST['accion'])) {
 
         //Inicio 
-        if ($_REQUEST['accion'] == "inicio") {
+        if ($_REQUEST['accion'] == "inicioAdmin") {
             ControladorLogin::mostrarLogin();
         }
 
@@ -68,23 +68,29 @@ if ($_REQUEST) {
             ControladorLogin::mostrarFormularioLoginError();
         }
 
-        //Mostrar 
-       /* if ($_REQUEST['accion'] == "mostrarN") {
-            ControladorNoticia::mostrarNoticias();
-        }*/
-
         if ($_REQUEST['accion'] == "generarArticulo") {
             $articulo = filtrado($_REQUEST['articulo']);
-            ControladorArticulos::mostrarchatGPT($articulo);
+            ControladorArticulo::mostrarchatGPT($articulo);
         }
 
-        
+        if ($_REQUEST['accion'] == "guardarArticulo") {
+
+            $articulo['titulo'] = filtrado($_REQUEST['titulo']);
+            $articulo['texto'] = filtrado($_REQUEST['texto']);
+            $articulo['imagen'] = filtrado($_REQUEST['imagen']);
+            $articulo['fecha'] =filtrado(date("d/m/Y"));
+
+            ControladorArticulo::guardarArticulo($articulo);
+        }
+
+
         if ($_REQUEST['accion'] == "mostrarFormulario") {
             ControladorFormulario::mostrarFormulario();
+            
         }
 
-        if ($_REQUEST['accion'] == "mostrarArticulo") {
-            ControladorArticulo::mostrarArticulo();
+        if ($_REQUEST['accion'] == "mostrarArticulos") {
+            ControladorArticulos::mostrarArticulo();
         }
 
     }

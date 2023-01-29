@@ -11,7 +11,7 @@
     </style>
 </head>
 
-<body>
+<body >
 
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
         <div class="container-fluid">
