@@ -5,11 +5,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}))
 
 //Cargar rutas
-const task_routes = require("./routes/task");
+const song_routes = require("./routes/song");
 const user_routes = require("./routes/user");
 
 //Ruta base
-app.use("/api", task_routes);
+app.use("/api", song_routes);
 app.use("/api", user_routes);
 
 

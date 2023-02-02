@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const app = require("./app");
 const port = 3000
-const urlMongoDb = "mongodb+srv://CarlosGicer:yBxNZg2rhvRLkjM2@cluster0.t2cczmv.mongodb.net/test"
+const urlMongoDb = "mongodb+srv://CarlosGicer:gicer666@cluster0.t2cczmv.mongodb.net/test";
 
 mongoose.set("strictQuery", false)
 
 mongoose.connect(urlMongoDb, {
   useNewUrlParser: true,
-  userUnifiedTopology: true
+  useUnifiedTopology: true
 }, (err, res) => {
   try {
 

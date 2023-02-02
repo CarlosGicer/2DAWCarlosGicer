@@ -10,7 +10,7 @@ const api = express.Router();
 api.post("/user", UserController.register);
 
 //Login usuario con token
-api.post("/user", UserController.login);
+api.post("/login", UserController.login);
 
 
 
