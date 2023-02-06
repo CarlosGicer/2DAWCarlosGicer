@@ -1,5 +1,5 @@
-
 <?php
+
     class ControladorLogin {
 
         public static function mostrarLogin() {
@@ -14,11 +14,10 @@
         public static function chequearLogin($email, $password) {
 
             require_once('vendor/autoload.php');
-
             $client = new \GuzzleHttp\Client();
-     
-     
-            $response = $client->request('POST', 'http://localhost:3000/crear-api/login', [
+            $_SESSION['token']=null;
+
+            $response = $client->request('POST', 'http://MiIp:3000/api/login', [
                 'body' => '{"email":"'.$email.'","password":"'.$password.'"}',
                 'headers' => [
                     'accept' => 'application/json',
@@ -27,11 +26,13 @@
             ]);
      
             $respuesta = $response->getBody();
+            $var = json_decode($respuesta, true);
 
             //Error login
-            if ($respuesta == "Email o password incorrectos") {
+            if ($var == "Email o password incorrectos") {
                 echo "<script>window.location='enrutador.php?accion=error';</script>";
             }else {
+                $_SESSION['token']=$var;
                 echo "<script>window.location='enrutador.php?accion=mostrar';</script>";
             }
 

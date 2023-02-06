@@ -54,7 +54,7 @@ async function getSongs(req, res) {
 async function deleteSong(req, res) {
     const idSong = req.params.id;
     try {
-        const song = await Song.deleteOne({_id: idSong});
+        const song = await Song.deleteOne({ _id: idSong });
         //const task = await Task.findByIdAndDelete(idTask);
         if (!song) {
             res.status(400).send("error al borrar la cancion.");
@@ -68,29 +68,26 @@ async function deleteSong(req, res) {
 
 //le suma a la canción del id una nueva valoración que vaya en formato JSON en el body de la request.
 async function updateValoracion(req, res) {
-    const idSong = req.params.id;
-    const bodyJson = req.body;
-    bodyJson.puntuacion;
+
+
+
+    const idCancion = req.params.id;
+    const cuerpo = req.body;
+    cuerpo.puntuacion;
+
 
     try {
-        
-        const cancionPuntuacion = await Song.findById(idSong);
-        const nuevoValor = bodyJson.puntuacion + cancionPuntuacion.puntuacion;
-
-        const song = await Song.findByIdAndUpdate(idSong, { 
-            $set: { puntuacion: nuevoValor}
-        });
-
-        //const task = await Task.findByIdAndDelete(idTask);
-        if (!song) {
-            res.status(400).send("no se ha podido modificar.");
+        const canciones = await Song.findByIdAndUpdate(idCancion,
+            { $inc: { puntuacion: cuerpo.puntuacion } });
+        if (!canciones) {
+            res.status(400).send({ "msg": "error al actualizar la cancion" })
         } else {
-            res.status(200).send("cancion modificada");
+            res.status(200).send({ msg: "cancion actualizada" })
         }
     } catch (error) {
         res.status(500).send(error);
     }
-   
+
 }
 
 async function getSong(req, res) {
@@ -123,7 +120,7 @@ async function getSongs(req, res) {
 async function getSongsGenre(req, res) {
     const genre = req.params.genero;
     try {
-        const songs = await Song.find({ genero: genre});
+        const songs = await Song.find({ genero: genre });
         if (!songs) {
             res.status(400).send("error al obtener la cancion.");
         } else {
@@ -136,7 +133,7 @@ async function getSongsGenre(req, res) {
 
 async function getSongsTop(req, res) {
     try {
-        const songs = await Song.find().sort({ puntuacion: -1 }).limit(10); 
+        const songs = await Song.find().sort({ puntuacion: -1 }).limit(10);
         if (!songs) {
             res.status(400).send("error al obtener las canciones top.");
         } else {
@@ -149,7 +146,7 @@ async function getSongsTop(req, res) {
 module.exports = {
     createSong,
     getSongs,
-    deleteSong, 
+    deleteSong,
     updateValoracion,
     getSong,
     getSongsGenre,

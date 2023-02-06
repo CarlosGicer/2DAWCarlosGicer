@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 //session_destroy();
 
 //AUTOLOAD
@@ -52,5 +52,22 @@ if ($_REQUEST) {
             ControladorLogin::mostrarFormularioLoginError();
         }
 
+        if ($_REQUEST['accion'] == "mostrar") {
+
+           $token = implode($_SESSION['token']) ;
+            ControladorSongs::mostrarSongs( $token);
+        }
+        if ($_REQUEST['accion'] == "mostrarTop") {
+
+            $token = implode($_SESSION['token']) ;
+             ControladorSongs::mostrarTop( $token);
+         }
+
+        if ($_REQUEST['accion'] == "valorar") {
+            $id= filtrado($_REQUEST['id']);
+            $valoracion = filtrado($_REQUEST['valoracion']);
+            $token = implode($_SESSION['token']) ;
+           ControladorSongs::valorar($id,$valoracion,$token);
+         }
     }
 }

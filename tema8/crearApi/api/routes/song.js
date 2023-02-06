@@ -16,13 +16,13 @@ api.get("/song/:id", [md_auth.ensureAuth], SongController.getSong);
 api.delete("/song/:id", [md_auth.ensureAuth], SongController.deleteSong);
 
 //upgradea la valoracion de una cancion
-api.put("/song/:id", [md_auth.ensureAuth], SongController.updateValoracion);
+api.put("/song/valorar/:id", [md_auth.ensureAuth], SongController.updateValoracion);
 
 //muestra las canciones de un genero
 api.get("/song/genero/:genero", [md_auth.ensureAuth], SongController.getSongsGenre);
 
 //muestra las canciones 10 top
-api.get("/song/top/tops", [md_auth.ensureAuth], SongController.getSongsTop);
+api.get("/song/top/top10", [md_auth.ensureAuth], SongController.getSongsTop);
 /*
 */
 module.exports = api;
